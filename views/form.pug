@@ -1,0 +1,15 @@
+extends layout 
+
+block content 
+    h1= title
+    button(type='button')
+        a(href='/') Back to Homepage
+
+    form(action='/new', method='POST') 
+        div 
+            label(for='messageUser') Username:
+            input(type="text" id='user' name='messageUser' required)
+        div 
+            label(for='messageText') Message:
+            textarea(id='message' name='messageText' cols='10' rows='5' required)
+        button(type='submit') Send

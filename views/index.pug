@@ -1,0 +1,15 @@
+extends layout
+
+block content
+	h1= title
+
+	ul
+		each val in messages
+			li
+				p 
+					span #{val.user}:
+					| #{val.text}
+				p(class='date') #{val.added}
+
+	button(type='button')
+		a(href='/new') Add a message
